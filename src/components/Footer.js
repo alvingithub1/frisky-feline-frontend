@@ -5,9 +5,9 @@ export class Footer extends Component {
   render() {
     return (
       <div className="footer" >
-      © 2022 Copyright:
+      <h3>© 2022 Copyright:</h3>
       <p>Corey & Alvin</p>
-      <a href="#" > @Git Hub</a>
+      <a href="#" >Git Hub</a>
     </div>
     )
   }
