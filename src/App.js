@@ -10,11 +10,13 @@ import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 import mockCats from './mockCats'
 
+import './App.css'
+
 export class App extends Component {
   render() {
     return (
-      <>
-      <Router>
+    
+      <Router className="container">
         <Header />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -26,7 +28,7 @@ export class App extends Component {
         </Switch>
         <Footer />
       </Router>
-      </>
+      
     )
   }
 }
