@@ -15,15 +15,17 @@ import {
   NavbarText
 } from 'reactstrap';
 
+import cat from '../assets/header-cat.png'
+
 const Header = (args) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="header-container">
       <Navbar {...args} className="navbar-expand">
-        <NavbarBrand href="/">Friskey Feline</NavbarBrand>
+        <NavbarBrand href="/" className="frisky-feline-header">Friskey Feline</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
@@ -37,7 +39,7 @@ const Header = (args) => {
               <NavLink href="/catnew">Edit</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText><img src={cat} className="header-img"/></NavbarText>
         </Collapse>
       </Navbar>
     </div>
