@@ -13,9 +13,13 @@ describe("When Home renders", ()=> {
     });
 
     it("displays an h3 with text", ()=>{
-        const homeWelcomeTagText = renderedHome.find("h3").text()
-
-        expect(homeWelcomeTagText).toEqual("Home")
+      const homeWelcomeTagText = renderedHome.find("h3").text()
+      expect(homeWelcomeTagText).toEqual("Home")
+    })
+  
+    it("displays image on home page", ()=>{
+        const homeImage = renderedHome.find("img")
+        expect(homeImage.length).toEqual(1)
     })
     
 })
