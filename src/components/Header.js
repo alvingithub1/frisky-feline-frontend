@@ -1,20 +1,5 @@
-import React, { Component, useState } from 'react'
-// import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from 'reactstrap';
-
+import React, { useState } from 'react'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, NavbarText } from 'reactstrap'
 import cat from '../assets/header-cat.png'
 
 const Header = (args) => {
@@ -29,8 +14,11 @@ const Header = (args) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
-            <NavItem>
+          <NavItem>
               <NavLink href="/">Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/catindex">Show All Cats</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/catshow">Show</NavLink>
