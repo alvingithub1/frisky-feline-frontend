@@ -8,9 +8,7 @@ import CatNew from './pages/CatNew'
 import CatShow from './pages/CatShow'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
-import mockCats from './mockCats'
 import cats from './mockCats'
-
 import './App.css'
 
 export class App extends Component {
@@ -22,7 +20,6 @@ export class App extends Component {
   }
 
   render() {
-    // console.log(this.state.cats)
     return (
     
       <Router className="container">
