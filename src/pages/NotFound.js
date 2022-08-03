@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import confused from '../assets/confused-cat.gif'
 
-export class NotFound extends Component {
+class NotFound extends Component {
   render() {
     return (
       <div className="not-found">

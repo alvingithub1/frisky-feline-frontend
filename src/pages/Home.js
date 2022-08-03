@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Button } from 'reactstrap';
 
-export class Home extends Component {
+class Home extends Component {
   render() {
     return (
       <>

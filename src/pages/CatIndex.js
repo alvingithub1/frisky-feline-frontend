@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
-export class CatIndex extends Component {
+class CatIndex extends Component {
 
   render() {
     return (

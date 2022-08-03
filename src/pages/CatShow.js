@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap'
 
-export class CatShow extends Component {
+class CatShow extends Component {
   render() {
     console.log(this.props.cat)
     let { cat } = this.props
