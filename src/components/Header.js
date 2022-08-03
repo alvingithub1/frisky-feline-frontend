@@ -29,8 +29,11 @@ const Header = (args) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
-            <NavItem>
+          <NavItem>
               <NavLink href="/">Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/catindex">Show All Cats</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/catshow">Show</NavLink>
