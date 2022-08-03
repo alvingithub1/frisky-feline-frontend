@@ -24,7 +24,7 @@ const Header = (args) => {
               <NavLink href="/catshow">Show</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/catnew">Edit</NavLink>
+              <NavLink href="/catnew">New Cat</NavLink>
             </NavItem>
           </Nav>
           <NavbarText><img src={cat} className="header-img"/></NavbarText>

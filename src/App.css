@@ -1,3 +1,8 @@
+body {
+  background-image: url("./assets/paw-print.png");
+  background-size: cover;
+}
+
 /*------Not Found-----*/
 .not-found {
   padding-top:1rem;
@@ -20,13 +25,25 @@
   width:2rem;
 }
 
+/* App CSS */
+.container {
+  background-image: url("./assets/paw-print.png");
+  background-size: cover;
+}
+
+/* Home.js CSS */
+.homeImage img {
+  height: 500px;
+  width: 700px;
+  
+}
 
 
 
 /*------Footer CSS-----*/
  .footer {
   text-align: center;
-  /* position:fixed; */
+  position:fixed;
   bottom: 0;
   width:100%;
   display: flex;
