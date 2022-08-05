@@ -5,7 +5,7 @@ class NotFound extends Component {
   render() {
     return (
       <div className="not-found">
-          <h1>Sorry This page was not found</h1>
+          <h3 className='notFoundTitle'>Sorry, this page was not found</h3>
           <img src={confused}/>
       </div>
     )

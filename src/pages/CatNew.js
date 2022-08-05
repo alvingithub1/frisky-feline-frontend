@@ -34,6 +34,8 @@ class CatNew extends Component {
 
   render() {
     return (
+    <>
+    <h3 className='catNewTitle'>Create a new cat below!</h3>
     <Form>
           <FormGroup>
             <Label for="name">Name</Label>
@@ -77,7 +79,8 @@ class CatNew extends Component {
             Create a New Profile
           </Button>
           {this.state.submitted && <Redirect to="/catindex" />}
-        </Form>    
+        </Form>  
+        </>  
       )
   }
 }

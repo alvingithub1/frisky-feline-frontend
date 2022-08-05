@@ -8,14 +8,16 @@ class Home extends Component {
   render() {
     return (
       <>
-        <h3>Home</h3>
+      <div className='homePageAll'>
+        <h3 className='headerHome'>Home (Welcome to Friskey Felines!)</h3>
+        <p className='introHome'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Pretium vulputate sapien nec sagittis aliquam malesuada. Semper quis lectus.</p>
         <div className='homeImage'>
           <img src={homeCat}/>
         </div>
         <NavLink to={`/catindex`}>
           <Button>Show All Cats</Button>
         </NavLink>
-
+        </div>
       </>
     )
   }

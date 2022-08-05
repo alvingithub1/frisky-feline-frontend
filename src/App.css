@@ -9,7 +9,10 @@ body {
   text-align: center;
 }
 
-
+.notFoundTitle {
+  padding-top: 10px;
+  background-color: white;
+}
 
 /*------Header CSS-----*/
 
@@ -25,6 +28,7 @@ body {
   width:2rem;
 }
 
+
 /* App CSS */
 .container {
   background-image: url("./assets/paw-print.png");
@@ -32,13 +36,82 @@ body {
 }
 
 /* Home.js CSS */
-.homeImage img {
-  height: 500px;
+
+.headerHome {
+  padding-top: 10px;
+  background-color: white;
+}
+
+.introHome {
   width: 700px;
-  
+  background-color: white;
 }
 
 
+.homeImage img {
+  height: 500px;
+  width: 700px;  
+  border-radius: 50%;
+}
+
+.homePageAll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* CatIndex / Card CSS */
+.cardIndex {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+  /* height: 25%;
+  width: 25%; */
+  margin: 10px;
+}
+
+.indivCard {
+  margin: 5px;
+  height: 250px;
+  width: 250px;
+  margin-bottom: 50%;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.cardContainerAll {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.indexAllContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.indexTitle {
+  background-color: white;
+  padding-top: 10px;
+}
+
+/* CatNew.js */
+.catNewTitle {
+  background-color: white;
+  padding-top: 10px;
+  text-align: center;
+
+}
 
 /*------Footer CSS-----*/
  .footer {
@@ -47,8 +120,14 @@ body {
   bottom: 0;
   width:100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   background-color: lightblue;
   padding-top:1rem;
+  padding: 5px;
+  padding-bottom: 0px;
+}
+
+.p {
+  margin-bottom: 2px;
 }

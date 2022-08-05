@@ -23,12 +23,33 @@ class App extends Component {
     console.log(theNewCatObject)
   }
 
+  updateCat = (cat, id) => {
+    console.log("cat:", cat)
+    console.log("id:", id)
+  }
+
+  deleteCat = (id) => {
+    console.log("deleted", id)
+  }
+
+
   render() {
+    
     return (
     
       <Router className="container">
         <Header />
         <Switch>
+        <Route path="/catedit/:id" render={(props) => {
+            let id = +props.match.params.id
+            let cat = this.state.cats.find(catObject => catObject.id === id)
+            return(
+              <CatEdit 
+                cat={cat}
+                updateCat={this.updateCat}
+              />
+            ) 
+          }} />
           <Route exact path="/" component={Home} />
           <Route path="/catindex" render={() => <CatIndex cats={this.state.cats}/>} />
           <Route path="/catshow/:id" render={(props) => {
@@ -40,7 +61,16 @@ class App extends Component {
             render={()=>{
             return <CatNew createNewCat = {this.createNewCat} />
           }} />
-          <Route path="/catedit" component={CatEdit} />
+          <Route path="/catshow/:id" render={(props) => {
+            let id = +props.match.params.id
+            let cat = this.state.cats.find(catObject => catObject.id === id)
+            return(
+              <CatShow 
+                cat={cat}
+                deleteCat={this.deleteCat}
+              />
+            )
+          }} />
           <Route component={NotFound}/>
         </Switch>
         <Footer />
