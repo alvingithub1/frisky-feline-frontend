@@ -21,7 +21,7 @@ const Header = (args) => {
               <NavLink href="/catindex">Show All Cats</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/catshow">Show</NavLink>
+              <NavLink href="/catshow">Error Page</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/catnew">New Cat</NavLink>
