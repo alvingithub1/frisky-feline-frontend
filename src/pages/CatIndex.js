@@ -7,13 +7,13 @@ class CatIndex extends Component {
   render() {
     return (
       <>
-      <div className='indexAllContainer'>
+      <div className='indexAllContainer' >
       <h3 className='indexTitle'>Find your purrfect match</h3>
       <div className='cardContainerAll'>
         {this.props.cats &&  this.props.cats.map(cat => {
           return(
-            <div className='cardIndex'>
-              <Card key={cat.id}>
+            <div key={cat.id} className='cardIndex'>
+              <Card >
                 <div className='indivCard'>
                   <CardImg top src={cat.image} alt="Card image cap" />
                 </div>
