@@ -4,23 +4,33 @@ import { NavLink } from 'react-router-dom'
 
 
 class CatShow extends Component {
+
+  
+  
   render() {
-    // console.log(this.props.cat)
-    let { cat } = this.props
+    
+    let {cat} = this.props
+    
     return (
       <>
-      <Card>
-        <CardImg top width="100%" src={cat.image} alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Hi, my name is {cat.name}</CardTitle>
-          <CardSubtitle>{cat.age}</CardSubtitle>
-          <CardText>{cat.enjoys}</CardText>
-          <NavLink to={`/catedit/${this.props.cat.id}`}>
-            <Button>Update Cat</Button>
-          </NavLink>
-            <Button onClick={() => this.props.deleteCat(cat.id)}>Delete Cat</Button>
-        </CardBody>
-      </Card>
+      <div className="show-container">
+        <Card className="card-container" key={cat.id}>
+          <CardImg top width="100%" src={this.props.cat.image} alt="Card image cap" />
+          <CardBody>
+            <CardTitle>Hi, my name is {this.props.cat.name}</CardTitle>
+            <CardSubtitle>{this.props.cat.age}</CardSubtitle>
+            <CardText>{this.props.cat.enjoys}</CardText>
+            <div className="show-button">
+              <NavLink to={`/catedit/${this.props.cat.id}`}>
+                <Button>Update Cat</Button>
+              </NavLink>
+              <NavLink to="/catindex">
+                <Button onClick={() => this.props.deleteCat(cat.id)}>Delete Cat</Button>
+              </NavLink>
+            </div>
+          </CardBody>
+        </Card>
+      </div>
       </>
     )
   }

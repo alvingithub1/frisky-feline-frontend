@@ -59,6 +59,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  padding-bottom: 5rem;
 }
 
 /* CatIndex / Card CSS */
@@ -103,6 +104,44 @@ body {
 .indexTitle {
   background-color: white;
   padding-top: 10px;
+}
+
+/* CatShow.js */
+
+.show-container{
+  display: flex;
+  justify-content: center;
+  padding-top:1.5rem;
+  padding-bottom: 5rem;
+}
+
+.card-container{
+  padding-bottom:1rem;
+  padding-top:1rem;
+  width:30%;
+  display: flex;
+  align-items: center;
+}
+
+.card-container img{
+  height:350px;
+  width:350px;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+.show-button{
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-button Button{
+  background-color: lightblue;
+  color:black;
+}
+
+.show-button Button:hover{
+  color:white;
 }
 
 /* CatNew.js */
