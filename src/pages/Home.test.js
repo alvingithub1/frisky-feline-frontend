@@ -14,7 +14,7 @@ describe("When Home renders", ()=> {
 
     it("displays an h3 with text", ()=>{
       const homeWelcomeTagText = renderedHome.find("h3").text()
-      expect(homeWelcomeTagText).toEqual("Home")
+      expect(homeWelcomeTagText).toEqual("Welcome to Friskey Felines!")
     })
   
     it("displays image on home page", ()=>{

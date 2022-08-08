@@ -13,17 +13,17 @@ describe("When Footer renders",()=>{
 
     it("It displays div tag with text", ()=>{
         const renderedFooterCopy = renderedFooter.find("h3").text()
-        expect(renderedFooterCopy).toEqual("© 2022 Copyright:")
+        expect(renderedFooterCopy).toEqual("© 2022 Copyright")
     })
 
     it("It displays p tag with text", ()=>{
         const renderedFooterText = renderedFooter.find("p").text()
-        expect(renderedFooterText).toEqual("Corey & Alvin")
+        expect(renderedFooterText).toEqual("Corey & Alvin | GitHub")
     })
 
     it("It displays p tag with text", ()=>{
         const renderedFooterAnchor = renderedFooter.find("a").text()
-        expect(renderedFooterAnchor).toEqual("Git Hub")
+        expect(renderedFooterAnchor).toEqual("GitHub")
     })
 
     it("It has a route to git hub", ()=>{

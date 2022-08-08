@@ -49,9 +49,11 @@ body {
 
 
 .homeImage img {
-  height: 500px;
-  width: 700px;  
+  height: 350px;
+  width: 350px;  
   border-radius: 50%;
+  border: 1.5px solid black;
+  
 }
 
 .homePageAll {
@@ -76,12 +78,17 @@ body {
   margin: 5px;
   height: 250px;
   width: 250px;
-  margin-bottom: 50%;
+  margin-bottom: 4rem;
 
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
+}
+
+.indivCard img{
+  width:230px;
+  height:300px;
 }
 
 .cardContainerAll {
@@ -101,6 +108,19 @@ body {
   align-items: center;
 }
 
+.cardIndex {
+  line-height: 3rem;
+}
+
+.cardIndex Button{
+  background-color: lightblue;
+  color: black;
+}
+
+.cardIndex Button:hover{
+  color: white;
+}
+
 .indexTitle {
   background-color: white;
   padding-top: 10px;
@@ -116,7 +136,7 @@ body {
 }
 
 .card-container{
-  padding-bottom:1rem;
+  padding-bottom:.2rem;
   padding-top:1rem;
   width:30%;
   display: flex;
@@ -130,14 +150,17 @@ body {
   border-radius: 7px;
 }
 
-.show-button{
+.show-button {
+  width: 300px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
-.show-button Button{
+
+.show-button  Button{
   background-color: lightblue;
   color:black;
+  
 }
 
 .show-button Button:hover{
@@ -146,10 +169,45 @@ body {
 
 /* CatNew.js */
 .catNewTitle {
-  background-color: white;
+  
   padding-top: 10px;
   text-align: center;
 
+}
+
+.show-requirement-text{
+  color:red;
+}
+
+/*-----Edit Css-----*/
+.form-container{
+  
+  width:100vw;
+  height:80vh;
+  padding: 1.5rem 0 1.5rem 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container Form{
+  width:60%;
+  height:fit-content;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: lightgray;
+  padding: .5rem;
+  box-shadow: 5px 5px lightblue;
+}
+
+.form-container h2{
+  text-align: center;
+}
+
+.form-button Button{
+  width:100%;
+  padding-left:auto;
+  padding-right: auto;
 }
 
 /*------Footer CSS-----*/

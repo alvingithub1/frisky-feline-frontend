@@ -26,7 +26,7 @@ describe("When App Renders", () => {
   });
 
   it("displays header footer", () => {
-    const renderedIndex = renderedApp.find("h2")
+    const renderedIndex = renderedApp.find("h3")
 
     expect(renderedIndex.length).toEqual(1)
     expect(renderedIndex.text()).toEqual("Find your purrfect match")
