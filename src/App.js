@@ -14,21 +14,24 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      cats: []
+      cats: [],
+      
     }
   }
 
   componentDidMount(){
     this.readCat()
+    
   }
 
+  
   readCat = () => {
     fetch("http://localhost:3000/cats")
     .then(response => response.json())
     .then(payload => this.setState({cats:payload}))
     .catch(errors => console.log("Cat read errors", errors))
   }
-
+  
   createNewCat = (theNewCatObject) => {
     fetch("http://localhost:3000/cats", {
       body: JSON.stringify(theNewCatObject),
@@ -39,9 +42,12 @@ class App extends Component {
     })
     .then(response => response.json())
     .then(() => this.readCat())
-    .catch(errors => console.log("Create new cat errors", errors))
+    .catch(errors => {
+      errors = true
+      this.setState({errors:errors})
+    })
   }
-
+  
   updateCat = (cat, id) => {
     fetch(`http://localhost:3000/cats/${id}`,{
       body: JSON.stringify(cat),
@@ -54,7 +60,7 @@ class App extends Component {
     .then(() => this.readCat())
     .catch(errors => console.log("Update cat errors", errors))
   }
-
+  
   deleteCat = (id) => {
     fetch(`http://localhost:3000/cats/${id}`,{
       headers: {
@@ -66,7 +72,8 @@ class App extends Component {
     .then(() => this.readCat())
     .catch(errors => console.log("Delete cat errors", errors))
   }
-
+  
+  
 
   render() {
     
@@ -75,26 +82,16 @@ class App extends Component {
       <Router className="container">
         <Header />
         <Switch>
-        <Route path="/catedit/:id" render={(props) => {
-            let id = +props.match.params.id
-            let cat = this.state.cats.find(catObject => catObject.id === id)
-            return(
-              <CatEdit 
-                cat={cat}
-                updateCat={this.updateCat}
-              />
-            ) 
-          }} />
           <Route exact path="/" component={Home} />
           <Route path="/catindex" render={() => <CatIndex cats={this.state.cats}/>} />
           <Route path="/catshow/:id" render={(props) => {
             let id = +props.match.params.id
-            let cat = this.state.cats.find(cat => cat.id === id)
-            return <CatShow cat={cat} deleteCat={this.deleteCat}/>
+            let cat = this.state.cats.find(cat => cat.id === id && cat)
+            return <CatShow cat={cat} deleteCat={this.deleteCat} />
           }} />
           <Route path="/catnew" 
             render={()=>{
-            return <CatNew createNewCat = {this.createNewCat} />
+            return <CatNew createNewCat = {this.createNewCat}  />
           }} />
           <Route path="/catedit/:id" render={(props) => {
             let id = +props.match.params.id

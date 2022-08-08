@@ -10,7 +10,8 @@ class CatEdit extends Component {
         name: this.props.cat.name,
         age: this.props.cat.age,
         enjoys: this.props.cat.enjoys,
-        image: this.props.cat.image
+        image: this.props.cat.image,
+        likes: this.props.cat.likes
       },
       submitted: false
     }
@@ -23,6 +24,7 @@ class CatEdit extends Component {
   }
 
   handleSubmit = () => {
+    alert(`Congratulations you edited a new ${this.props.cat.name}`)
     this.props.updateCat(this.state.updatedCat, this.props.cat.id)
     this.setState({ submitted: true })
   }
@@ -30,7 +32,9 @@ class CatEdit extends Component {
   render() {
     return (
       <>
+      <div className="form-container">
         <Form>
+          <h2>Edit {this.props.cat.name}</h2>
           <FormGroup>
             <Label for="name">Name</Label>
             <Input 
@@ -67,14 +71,17 @@ class CatEdit extends Component {
               value={ this.state.updatedCat.image }
             />
           </FormGroup>
-          <Button
-            name="submit"
-            onClick={this.handleSubmit}
-            >Submit Cat
-          </Button>
+          <div className="form-button">
+            <Button
+              name="submit"
+              onClick={this.handleSubmit}
+              >Submit Cat
+            </Button>
+          </div>
           {/* if submitted is true then go to catindex page  */}
           { this.state.submitted && <Redirect to={`/catshow/${this.props.cat.id}`}/> }
         </Form>
+      </div>
       </>
     )
   }

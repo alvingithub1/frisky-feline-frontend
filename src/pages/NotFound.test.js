@@ -12,9 +12,9 @@ describe("When NotFound renders", ()=>{
       renderedNotFound = shallow(<NotFound />);
     });
 
-    it("displays h1 tag with text", ()=>{
-        const renderedNotFoundText = renderedNotFound.find("h1").text()
-        expect(renderedNotFoundText).toEqual("Sorry This page was not found")
+    it("displays h3 tag with text", ()=>{
+        const renderedNotFoundText = renderedNotFound.find("h3").text()
+        expect(renderedNotFoundText).toEqual("Sorry, this page was not found")
     })
 
     it("renders image", ()=>{

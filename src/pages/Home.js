@@ -9,8 +9,8 @@ class Home extends Component {
     return (
       <>
       <div className='homePageAll'>
-        <h3 className='headerHome'>Home (Welcome to Friskey Felines!)</h3>
-        <p className='introHome'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Pretium vulputate sapien nec sagittis aliquam malesuada. Semper quis lectus.</p>
+        <h3 className='headerHome'>Welcome to Frisky Feline!</h3>
+        <p className='introHome'>Frisky Feline is an online platform that cats can meet other cats. Please view all of our available cats and get to know them a little more. If you have an available cat, please feel free to put them on the cat availability page.</p>
         <div className='homeImage'>
           <img src={homeCat}/>
         </div>
