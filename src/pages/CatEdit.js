@@ -30,6 +30,7 @@ class CatEdit extends Component {
   }
 
   render() {
+    
     return (
       <>
       <div className="form-container">
@@ -86,6 +87,7 @@ class CatEdit extends Component {
     )
   }
 }
+
 
 
 

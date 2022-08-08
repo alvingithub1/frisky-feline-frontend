@@ -87,7 +87,7 @@ class App extends Component {
           <Route path="/catshow/:id" render={(props) => {
             let id = +props.match.params.id
             let cat = this.state.cats.find(cat => cat.id === id && cat)
-            return <CatShow cat={cat} deleteCat={this.deleteCat} />
+            return <CatShow cats={this.state.cats} cat={cat} deleteCat={this.deleteCat} />
           }} />
           <Route path="/catnew" 
             render={()=>{

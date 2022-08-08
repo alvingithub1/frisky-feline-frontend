@@ -10,7 +10,7 @@ const Header = (args) => {
   return (
     <div className="header-container">
       <Navbar {...args} className="navbar-expand">
-        <NavbarBrand href="/" className="frisky-feline-header">Friskey Feline</NavbarBrand>
+        <NavbarBrand href="/" className="frisky-feline-header">Frisky Feline</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>

@@ -3,6 +3,8 @@ body {
   background-size: cover;
 }
 
+
+
 /*------Not Found-----*/
 .not-found {
   padding-top:1rem;
@@ -162,6 +164,7 @@ body {
   color:black;
   
 }
+
 
 .show-button Button:hover{
   color:white;
