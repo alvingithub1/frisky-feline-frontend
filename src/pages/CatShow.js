@@ -24,10 +24,10 @@ render() {
   return (
     <>
     <div className="show-container">
+      {cat &&
       <Card className="card-container" key={cat.id}>
       <CardImg top width="100%" src={cat.image} alt="Card image cap" onError={this.replaceImage} />
         <CardBody>
-          <Button onClick={this.handleClick}>❤️</Button>
           <CardTitle>Hi, my name is {cat.name}</CardTitle>
           <CardSubtitle>I am {cat.age} years old.</CardSubtitle>
           <CardText>I enjoy {cat.enjoys}</CardText>
@@ -41,6 +41,7 @@ render() {
           </div>
         </CardBody>
       </Card>
+}
     </div>
     </>
     )

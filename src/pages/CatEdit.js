@@ -17,6 +17,11 @@ class CatEdit extends Component {
     }
   }
 
+  componentDidMount = () => {
+    this.setState({updatedCat: this.props.cat})
+}
+
+
   handleChange = (e) => {
     let { updatedCat } = this.state
     updatedCat[e.target.name] = e.target.value
@@ -30,7 +35,8 @@ class CatEdit extends Component {
   }
 
   render() {
-    
+    const {cat} = this.props
+
     return (
       <>
       <div className="form-container">
